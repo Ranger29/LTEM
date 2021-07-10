@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  {% load static %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
@@ -46,15 +47,15 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-        <a class="navbar-brand" href="#">Ranger Iradukunda</a>
+        <a class="navbar-brand" href="{% url 'home' %}">Ranger Iradukunda</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
             <a class="nav-link active" aria-current="page" href="https://www.linkedin.com/in/ranger-iradukunda">LinkedIn</a>
-            <a class="nav-link" href="#">Blog</a>
-            <a class="nav-link" href="#">Resume</a>
+            <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
+            <a class="nav-link" href="{% static 'resume.jpg' %}">Resume</a>
           </div>
         </div>
 
@@ -71,6 +72,7 @@
           <p>
             <a href="mailto:iradukundarangeryahoo.com" class="btn btn-primary my-2">Email me</a>
           </p>
+          <img src="{% static 'adriana.jpg' %}" alt="my love" height="200">
         </div>
       </div>
     </section>
