@@ -47,12 +47,12 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-        <a class="navbar-brand" href="{% url 'home' %}">Ranger Iradukunda</a>
+        <a class="navbar-brand" href="{% url 'home'%}">Ranger Iradukunda</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ml-auto">
+          <div class="navbar-nav ms-auto">
             <a class="nav-link active" aria-current="page" href="https://www.linkedin.com/in/ranger-iradukunda">LinkedIn</a>
             <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
             <a class="nav-link" href="{% static 'resume.jpg' %}">Resume</a>
@@ -80,18 +80,18 @@
     <div class="album py-5 bg-light">
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          {% for job in jobs.all%}
 
-          <div class="col">
+          {% for job in jobs.all%}
+          <div class="col-md-4">
             <div class="card shadow-sm">
-              <img src="{{job.image.url}}" alt="image">
+              <img class="card-img-top" src="{{job.image.url}}" alt="image">
               <div class="card-body">
-                <p class="card-text">IT Support Tech</p>
-                {{jobs.summary}}
+                 <p class="card-text">{{ job.summary }}</p>
               </div>
             </div>
           </div>
           {% endfor %}
+
         </div>
       </div>
     </div>
